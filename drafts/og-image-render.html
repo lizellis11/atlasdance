@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* 1200x630 Open Graph standard */
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #0D0D0D;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    /* Gold corner brackets */
+    .corner {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border-color: #C9A84C;
+      border-style: solid;
+      border-width: 0;
+    }
+    .corner.tl { top: 40px; left: 50px; border-top-width: 2px; border-left-width: 2px; }
+    .corner.tr { top: 40px; right: 50px; border-top-width: 2px; border-right-width: 2px; }
+    .corner.bl { bottom: 40px; left: 50px; border-bottom-width: 2px; border-left-width: 2px; }
+    .corner.br { bottom: 40px; right: 50px; border-bottom-width: 2px; border-right-width: 2px; }
+
+    /* Gold top rule */
+    .top-rule {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #C9A84C;
+    }
+
+    .hero-logo {
+      height: 480px;
+      width: auto;
+    }
+
+    .text-side {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .title-block {
+      text-align: left;
+      line-height: 1;
+    }
+
+    .title-atlas {
+      font-family: 'Cinzel', Georgia, serif;
+      font-weight: 400;
+      font-size: 110px;
+      letter-spacing: 0.2em;
+      color: #F2EDE4;
+      line-height: 0.95;
+      display: block;
+    }
+
+    .title-dance {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 128px;
+      letter-spacing: 0.15em;
+      color: #C9A84C;
+      line-height: 0.95;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* Gold divider */
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: #C9A84C;
+      margin: 28px 0 24px;
+    }
+
+    .subtitle {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.25em;
+      color: #F2EDE4;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="top-rule"></div>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <img class="hero-logo" src="../hero-logo.png" alt="" />
+
+    <div class="text-side">
+      <div class="title-block">
+        <span class="title-atlas">ATLAS</span>
+        <span class="title-dance">Dance</span>
+      </div>
+      <div class="divider"></div>
+      <div class="subtitle">Dexter Ellis</div>
+    </div>
+  </div>
+</body>
+</html>

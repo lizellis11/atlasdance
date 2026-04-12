@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Dance — Brand Guide</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black:      #0D0D0D;
+      --dark:       #141414;
+      --charcoal:   #1E1E1E;
+      --gold:       #C9A84C;
+      --gold-light: #E8C96A;
+      --ivory:      #F2EDE4;
+      --muted:      #A39A8C;
+      --border:     rgba(201, 168, 76, 0.2);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #FFFFFF;
+      color: #1a1a1a;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* --- Header --- */
+    .guide-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding-bottom: 3rem;
+      border-bottom: 2px solid #E5E5E5;
+    }
+
+    .guide-header h1 {
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: 2.4rem;
+      letter-spacing: 0.2em;
+      color: var(--black);
+      margin-bottom: 0.3em;
+    }
+
+    .guide-header h1 em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+    }
+
+    .guide-subtitle {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 1.5rem;
+    }
+
+    .guide-meta {
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    /* --- Sections --- */
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .section-note {
+      font-size: 0.85rem;
+      color: #777;
+      line-height: 1.7;
+      max-width: 650px;
+      margin-bottom: 2rem;
+    }
+
+    /* --- Logo --- */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-card {
+      padding: 3rem 2rem;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    .logo-card.on-dark {
+      background: var(--black);
+    }
+
+    .logo-card.on-light {
+      background: var(--ivory);
+      border: 1px solid #E5E5E5;
+    }
+
+    .logo-card-label {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-card.on-dark .logo-card-label { color: var(--muted); }
+    .logo-card.on-light .logo-card-label { color: #999; }
+
+    .logo-atlas {
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: 2.4rem;
+      letter-spacing: 0.2em;
+      line-height: 1;
+    }
+
+    .logo-dance {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.4rem;
+      letter-spacing: 0.15em;
+      line-height: 1.1;
+    }
+
+    .logo-card.on-dark .logo-atlas { color: var(--ivory); }
+    .logo-card.on-dark .logo-dance { color: var(--gold); }
+    .logo-card.on-light .logo-atlas { color: var(--black); }
+    .logo-card.on-light .logo-dance { color: #8B7A2E; }
+
+    .logo-spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .logo-spec-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .logo-spec-table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid #F0F0F0;
+      color: #444;
+    }
+
+    .logo-spec-table td:first-child {
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+
+    /* --- Color --- */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .color-card {
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #E5E5E5;
+    }
+
+    .color-swatch {
+      height: 80px;
+    }
+
+    .color-info {
+      padding: 0.75rem;
+      background: #FFF;
+    }
+
+    .color-name {
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+
+    .color-value {
+      font-size: 0.7rem;
+      color: #999;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .color-role {
+      font-size: 0.65rem;
+      color: #aaa;
+      margin-top: 0.3rem;
+    }
+
+    /* --- Typography --- */
+    .type-specimen {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #F0F0F0;
+    }
+
+    .type-specimen:last-child {
+      border-bottom: none;
+    }
+
+    .type-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1rem;
+    }
+
+    .type-name {
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .type-role {
+      font-size: 0.7rem;
+      color: #999;
+    }
+
+    .type-sample {
+      margin-bottom: 1rem;
+    }
+
+    .type-sample-cinzel {
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: 2.2rem;
+      letter-spacing: 0.2em;
+      color: var(--black);
+    }
+
+    .type-sample-cormorant {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 2.2rem;
+      letter-spacing: 0.02em;
+      color: var(--black);
+    }
+
+    .type-sample-cormorant-italic {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 2.2rem;
+      letter-spacing: 0.02em;
+      color: var(--black);
+    }
+
+    .type-sample-inter {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: var(--black);
+    }
+
+    .type-details {
+      font-size: 0.8rem;
+      color: #777;
+      line-height: 1.8;
+    }
+
+    .type-details code {
+      background: #F5F5F5;
+      padding: 0.15em 0.4em;
+      border-radius: 3px;
+      font-size: 0.85em;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* --- Weights --- */
+    .weight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .weight-card {
+      padding: 1.2rem;
+      background: #FAFAFA;
+      border-radius: 4px;
+      border: 1px solid #F0F0F0;
+    }
+
+    .weight-card-label {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 0.5rem;
+    }
+
+    .weight-card-sample {
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+
+    /* --- Spacing & UI Elements --- */
+    .element-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .element-card {
+      padding: 2rem;
+      border-radius: 4px;
+      border: 1px solid #E5E5E5;
+    }
+
+    .element-card-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .sample-section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .sample-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      color: var(--black);
+    }
+
+    .sample-heading em {
+      font-style: italic;
+    }
+
+    .sample-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 1rem;
+    }
+
+    .sample-btn-gold {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      border-radius: 2px;
+      margin-top: 1rem;
+      margin-right: 0.8rem;
+    }
+
+    .sample-btn-outline {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+      border-radius: 2px;
+      margin-top: 1rem;
+    }
+
+    .sample-gold-rule {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      margin: 1rem 0;
+    }
+
+    /* --- Dark Context Preview --- */
+    .dark-preview {
+      background: var(--black);
+      border-radius: 4px;
+      padding: 3rem 2rem;
+      margin-top: 2rem;
+    }
+
+    .dark-preview .sample-section-label {
+      color: var(--gold);
+    }
+
+    .dark-preview .sample-heading {
+      color: var(--ivory);
+    }
+
+    .dark-preview .sample-heading em {
+      color: var(--gold);
+    }
+
+    .dark-preview .sample-body {
+      color: var(--muted);
+    }
+
+    .dark-preview .sample-gold-rule {
+      opacity: 0.8;
+    }
+
+    /* --- Footer --- */
+    .guide-footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 2px solid #E5E5E5;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #BBB;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 600px) {
+      .logo-grid { grid-template-columns: 1fr; }
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+      .weight-grid { grid-template-columns: 1fr; }
+      .element-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ========== HEADER ========== -->
+    <div class="guide-header">
+      <p class="guide-subtitle">Brand Guide</p>
+      <h1>Atlas <em>Dance</em></h1>
+      <p class="guide-meta">Dexter Ellis | Utah Ballroom Studio | March 2026</p>
+    </div>
+
+
+    <!-- ========== BRAND CONCEPT ========== -->
+    <div class="section">
+      <div class="section-title">Brand Concept</div>
+      <p class="section-note">
+        Atlas Dance is a private ballroom studio led by Dexter Ellis in Utah, coaching high school dancers toward national competition. The brand identity is built on the tension between <strong>strength and grace</strong> — the mythological Atlas bearing the weight of the world, expressed through the elegance of dance. This duality drives every visual choice: monumental type paired with fluid serifs, dark grounding tones lifted by gold accents, and a tone that is demanding but deeply supportive.
+      </p>
+    </div>
+
+
+    <!-- ========== LOGO ========== -->
+    <div class="section">
+      <div class="section-title">Logo Typography</div>
+      <p class="section-note">
+        The wordmark pairs two typefaces: <strong>Cinzel</strong> for "Atlas" (strength, structure, permanence) and <strong>Cormorant Garamond Italic</strong> for "Dance" (grace, movement, fluidity). The two words should always appear together and be treated as a single visual block. "Dance" renders in gold to accent the primary ivory/white of "Atlas."
+      </p>
+
+      <div class="logo-grid">
+        <div class="logo-card on-dark">
+          <div class="logo-card-label">Primary — On Dark</div>
+          <div class="logo-atlas">ATLAS</div>
+          <div class="logo-dance">Dance</div>
+        </div>
+        <div class="logo-card on-light">
+          <div class="logo-card-label">Primary — On Light</div>
+          <div class="logo-atlas">ATLAS</div>
+          <div class="logo-dance">Dance</div>
+        </div>
+      </div>
+
+      <table class="logo-spec-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Font</th>
+            <th>Weight</th>
+            <th>Style</th>
+            <th>Letter-Spacing</th>
+            <th>Color (on dark)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ATLAS</td>
+            <td>Cinzel</td>
+            <td>400 (Regular)</td>
+            <td>Normal, uppercase</td>
+            <td>0.2em</td>
+            <td>Ivory (#F2EDE4)</td>
+          </tr>
+          <tr>
+            <td>Dance</td>
+            <td>Cormorant Garamond</td>
+            <td>300 (Light)</td>
+            <td>Italic</td>
+            <td>0.15em</td>
+            <td>Gold (#C9A84C)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ========== COLOR PALETTE ========== -->
+    <div class="section">
+      <div class="section-title">Color Palette</div>
+      <p class="section-note">
+        A restrained, dark-dominant palette anchored in near-black with gold accents. All text color pairings meet WCAG AA contrast requirements (4.5:1 minimum).
+      </p>
+
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background: #0D0D0D;"></div>
+          <div class="color-info">
+            <div class="color-name">Black</div>
+            <div class="color-value">#0D0D0D</div>
+            <div class="color-role">Primary background</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: #141414;"></div>
+          <div class="color-info">
+            <div class="color-name">Dark</div>
+            <div class="color-value">#141414</div>
+            <div class="color-role">Card / surface background</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: #1E1E1E;"></div>
+          <div class="color-info">
+            <div class="color-name">Charcoal</div>
+            <div class="color-value">#1E1E1E</div>
+            <div class="color-role">Elevated surface</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: #C9A84C;"></div>
+          <div class="color-info">
+            <div class="color-name">Gold</div>
+            <div class="color-value">#C9A84C</div>
+            <div class="color-role">Primary accent, CTAs, "Dance"</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: #E8C96A;"></div>
+          <div class="color-info">
+            <div class="color-name">Gold Light</div>
+            <div class="color-value">#E8C96A</div>
+            <div class="color-role">Hover state, gradient end</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: #F2EDE4;"></div>
+          <div class="color-info">
+            <div class="color-name">Ivory</div>
+            <div class="color-value">#F2EDE4</div>
+            <div class="color-role">Primary text on dark</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: #A39A8C;"></div>
+          <div class="color-info">
+            <div class="color-name">Muted</div>
+            <div class="color-value">#A39A8C</div>
+            <div class="color-role">Secondary text, captions</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background: rgba(201,168,76,0.2); border: 1px dashed #C9A84C;"></div>
+          <div class="color-info">
+            <div class="color-name">Border</div>
+            <div class="color-value">rgba(201,168,76,0.2)</div>
+            <div class="color-role">Dividers, card borders</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========== TYPOGRAPHY ========== -->
+    <div class="section">
+      <div class="section-title">Typography System</div>
+      <p class="section-note">
+        Three typefaces, each with a distinct role. All are available free via Google Fonts.
+      </p>
+
+      <!-- Cinzel -->
+      <div class="type-specimen">
+        <div class="type-header">
+          <span class="type-name">Cinzel</span>
+          <span class="type-role">Logo "Atlas" + Display accents</span>
+        </div>
+        <div class="type-sample type-sample-cinzel">ATLAS DANCE STUDIO</div>
+        <div class="type-details">
+          Roman inscriptional serif inspired by classical carved lettering. Used exclusively for the "Atlas" portion of the logo and optional display treatments where monumental weight is needed.<br />
+          <strong>Weights available:</strong> 400 (Regular), 500 (Medium), 600 (SemiBold)<br />
+          <strong>Google Fonts:</strong> <code>Cinzel:wght@400;500;600</code><br />
+          <strong>CSS variable:</strong> <code>--font-logo</code><br />
+          <strong>Fallback stack:</strong> <code>Georgia, serif</code>
+        </div>
+
+        <div class="weight-grid">
+          <div class="weight-card">
+            <div class="weight-card-label">400 Regular</div>
+            <div class="weight-card-sample" style="font-family: 'Cinzel', serif; font-weight: 400; letter-spacing: 0.15em;">ATLAS</div>
+          </div>
+          <div class="weight-card">
+            <div class="weight-card-label">500 Medium</div>
+            <div class="weight-card-sample" style="font-family: 'Cinzel', serif; font-weight: 500; letter-spacing: 0.15em;">ATLAS</div>
+          </div>
+          <div class="weight-card">
+            <div class="weight-card-label">600 SemiBold</div>
+            <div class="weight-card-sample" style="font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.15em;">ATLAS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cormorant Garamond -->
+      <div class="type-specimen">
+        <div class="type-header">
+          <span class="type-name">Cormorant Garamond</span>
+          <span class="type-role">Logo "Dance" + Headings + Display</span>
+        </div>
+        <div class="type-sample type-sample-cormorant">Dance is not a performance.</div>
+        <div class="type-sample type-sample-cormorant-italic">It's a confession.</div>
+        <div class="type-details">
+          Refined, high-contrast serif with elegant italic forms. Primary display font for all headings, quotes, and the "Dance" portion of the logo.<br />
+          <strong>Weights available:</strong> 300 (Light), 400 (Regular), 600 (SemiBold) — each in Roman + Italic<br />
+          <strong>Google Fonts:</strong> <code>Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600</code><br />
+          <strong>CSS variable:</strong> <code>--font-display</code><br />
+          <strong>Fallback stack:</strong> <code>Georgia, serif</code>
+        </div>
+
+        <div class="weight-grid">
+          <div class="weight-card">
+            <div class="weight-card-label">300 Light</div>
+            <div class="weight-card-sample" style="font-family: 'Cormorant Garamond', serif; font-weight: 300;">The story in your bones</div>
+          </div>
+          <div class="weight-card">
+            <div class="weight-card-label">400 Regular</div>
+            <div class="weight-card-sample" style="font-family: 'Cormorant Garamond', serif; font-weight: 400;">The story in your bones</div>
+          </div>
+          <div class="weight-card">
+            <div class="weight-card-label">300 Light Italic</div>
+            <div class="weight-card-sample" style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic;">The story in your bones</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inter -->
+      <div class="type-specimen">
+        <div class="type-header">
+          <span class="type-name">Inter</span>
+          <span class="type-role">Body text + UI + Navigation</span>
+        </div>
+        <div class="type-sample type-sample-inter">Every movement you make is a sentence. Every step, a word.</div>
+        <div class="type-details">
+          Clean, highly legible sans-serif designed for screens. Used for body copy, navigation, buttons, form elements, labels, and all functional text.<br />
+          <strong>Weights available:</strong> 400 (Regular), 500 (Medium), 600 (SemiBold)<br />
+          <strong>Google Fonts:</strong> <code>Inter:wght@400;500;600</code><br />
+          <strong>CSS variable:</strong> <code>--font-body</code><br />
+          <strong>Fallback stack:</strong> <code>system-ui, sans-serif</code>
+        </div>
+
+        <div class="weight-grid">
+          <div class="weight-card">
+            <div class="weight-card-label">400 Regular</div>
+            <div class="weight-card-sample" style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1rem;">Body text and paragraphs</div>
+          </div>
+          <div class="weight-card">
+            <div class="weight-card-label">500 Medium</div>
+            <div class="weight-card-sample" style="font-family: 'Inter', sans-serif; font-weight: 500; font-size: 1rem;">Navigation links</div>
+          </div>
+          <div class="weight-card">
+            <div class="weight-card-label">600 SemiBold</div>
+            <div class="weight-card-sample" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.2em; text-transform: uppercase;">BUTTONS & LABELS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========== TYPE HIERARCHY ========== -->
+    <div class="section">
+      <div class="section-title">Type Hierarchy — Quick Reference</div>
+
+      <table class="logo-spec-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Font</th>
+            <th>Size</th>
+            <th>Weight</th>
+            <th>Tracking</th>
+            <th>Transform</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hero Title</td>
+            <td>Cinzel</td>
+            <td>clamp(3rem, 7vw, 6rem)</td>
+            <td>400</td>
+            <td>0.2em</td>
+            <td>Uppercase (natural)</td>
+          </tr>
+          <tr>
+            <td>Hero "Dance"</td>
+            <td>Cormorant Garamond</td>
+            <td>1.15em (of hero title)</td>
+            <td>300 Italic</td>
+            <td>0.15em</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Section Headings (h2)</td>
+            <td>Cormorant Garamond</td>
+            <td>~2.2rem</td>
+            <td>400</td>
+            <td>0.02em</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Section Label</td>
+            <td>Inter</td>
+            <td>0.7rem</td>
+            <td>600</td>
+            <td>0.25em</td>
+            <td>Uppercase</td>
+          </tr>
+          <tr>
+            <td>Nav Logo</td>
+            <td>Cinzel / Cormorant</td>
+            <td>1.6rem</td>
+            <td>400 / 300</td>
+            <td>0.2em / 0.15em</td>
+            <td>Inline pair</td>
+          </tr>
+          <tr>
+            <td>Navigation Links</td>
+            <td>Inter</td>
+            <td>0.75rem</td>
+            <td>500</td>
+            <td>0.18em</td>
+            <td>Uppercase</td>
+          </tr>
+          <tr>
+            <td>Body Text</td>
+            <td>Inter</td>
+            <td>16px (1rem)</td>
+            <td>400</td>
+            <td>Normal</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Buttons</td>
+            <td>Inter</td>
+            <td>0.75rem</td>
+            <td>600</td>
+            <td>0.2em</td>
+            <td>Uppercase</td>
+          </tr>
+          <tr>
+            <td>Blockquote</td>
+            <td>Cormorant Garamond</td>
+            <td>clamp(1.4rem, 3vw, 2rem)</td>
+            <td>300 Italic</td>
+            <td>Normal</td>
+            <td>None</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ========== UI ELEMENTS ========== -->
+    <div class="section">
+      <div class="section-title">UI Elements</div>
+
+      <div class="element-grid">
+        <div class="element-card">
+          <div class="element-card-label">Buttons</div>
+          <span class="sample-btn-gold">Apply for a Spot</span>
+          <span class="sample-btn-outline">Meet Dexter</span>
+          <div class="type-details" style="margin-top: 1.2rem;">
+            Inter 600, 0.75rem, uppercase<br />
+            Letter-spacing: 0.2em<br />
+            Padding: 1rem 2.2rem<br />
+            Border-radius: 2px<br />
+            Min height: 44px (touch target)
+          </div>
+        </div>
+
+        <div class="element-card">
+          <div class="element-card-label">Decorative Rule</div>
+          <div class="sample-gold-rule" style="margin: 1.5rem 0;"></div>
+          <div class="type-details">
+            60px wide, 1px height<br />
+            Gradient: Gold to Gold Light<br />
+            <code>linear-gradient(90deg, #C9A84C, #E8C96A)</code><br />
+            Used between section label and body text
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========== IN CONTEXT ========== -->
+    <div class="section">
+      <div class="section-title">In Context — Dark Background (Primary)</div>
+      <div class="dark-preview">
+        <div class="sample-section-label">The Atlas Philosophy</div>
+        <div class="sample-heading">Dance is not a<br /><em>performance.</em><br />It's a confession.</div>
+        <div class="sample-gold-rule"></div>
+        <p class="sample-body">
+          Every movement you make is a sentence. Every step, a word. The floor is your page — and when you dance at Atlas, you learn to write something true.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- ========== BRAND VOICE ========== -->
+    <div class="section">
+      <div class="section-title">Brand Voice</div>
+      <p class="section-note">
+        Atlas Dance speaks with <strong>quiet authority</strong>. The tone is literary, not corporate — poetic but never precious. Sentences are short and declarative. The writing respects the reader's intelligence and never oversells. Key themes:
+      </p>
+      <table class="logo-spec-table">
+        <thead>
+          <tr><th>Attribute</th><th>Expression</th><th>Avoid</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Confidence</td><td>"The floor is waiting."</td><td>"We're the best studio around!"</td></tr>
+          <tr><td>Intimacy</td><td>"Your heart goes down first."</td><td>"Our students love us!"</td></tr>
+          <tr><td>High Standards</td><td>"He won't go easy on you. That's the point."</td><td>"We push you to be your best self!"</td></tr>
+          <tr><td>Story-Driven</td><td>"We don't train bodies. We train storytellers."</td><td>"Learn all five ballroom styles!"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ========== TECHNICAL ========== -->
+    <div class="section">
+      <div class="section-title">Technical Reference</div>
+      <table class="logo-spec-table">
+        <thead>
+          <tr><th>Property</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Max content width</td><td>1100px (.container)</td></tr>
+          <tr><td>Narrow content width</td><td>720px (.container--narrow)</td></tr>
+          <tr><td>Section padding</td><td>7rem vertical</td></tr>
+          <tr><td>Base font size</td><td>16px</td></tr>
+          <tr><td>Base line height</td><td>1.6</td></tr>
+          <tr><td>Border radius</td><td>2px (all elements)</td></tr>
+          <tr><td>Transition timing</td><td>0.2s–0.25s ease</td></tr>
+          <tr><td>Focus style</td><td>2px solid Gold, 3px offset</td></tr>
+          <tr><td>Font loading</td><td>Google Fonts, display=swap</td></tr>
+          <tr><td>Motion preference</td><td>Respects prefers-reduced-motion</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ========== FOOTER ========== -->
+    <div class="guide-footer">
+      Atlas Dance Brand Guide &mdash; March 2026 &mdash; Prepared for designer reference
+    </div>
+
+  </div>
+</body>
+</html>
